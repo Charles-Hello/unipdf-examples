@@ -5,9 +5,10 @@ forms.
 
 ## Examples
 
-- [pdf_form_add.go](pdf_form_add.go) illustates adding a basic form to a document.
+- [pdf_form_add.go](pdf_form_add.go) illustrates adding a basic form to a document.
+- [pdf_form_action.go](pdf_form_action.go) illustrates how to add a submit and reset button to a form.
 - [pdf_form_fill_custom_font.go](pdf_form_fill_custom_font.go) illustrates how to specify custom fonts when filling and flattening forms.
-- [pdf_form_fill_fdf_merge.go](pdf_form_fill_fdf_merge.go) illustates FDF merging - merging FDF form data (values) with a template PDF, producing a flattened output PDF (with appearances streams generated).
+- [pdf_form_fill_fdf_merge.go](pdf_form_fill_fdf_merge.go) illustrates FDF merging - merging FDF form data (values) with a template PDF, producing a flattened output PDF (with appearances streams generated).
 - [pdf_form_fill_json.go](pdf_form_fill_json.go) supports exporting form data as JSON as well filling form and outputting a flattened PDF (see below).
 - [pdf_form_flatten.go](pdf_form_flatten.go) flattens a form, making the fields part of the document and no longer editable.
 - [pdf_form_partial_flatten.go](pdf_form_partial_flatten.go) partially flattens a form by using field filtering callback function.
@@ -16,6 +17,8 @@ forms.
 - [pdf_form_get_field_data.go](pdf_form_get_field_data.go) gets field data for a single field by field name.
 - [pdf_form_list_fields.go](pdf_form_list_fields.go) lists form fields in a PDF.
 - [pdf_form_fields_rotations.go](pdf_form_fields_rotations.go) form fields with customized rotation in a PDF.
+- [pdf_form_with_text_color.go](pdf_form_with_text_color.go) form fields with custom text color.
+- [pdf_fill_and_flatten_with_apearance.go](pdf_fill_and_flatten_with_apearance.go) flatten or fill PDF forms with custom appearance including text color.
 
 ## Use cases
 

@@ -51,7 +51,7 @@ var (
 	sigLen = 8192
 )
 
-const usagef = "Usage: %s INPUT_PDF_PATH OUTPUT_PDF_PATH\n"
+const usagef = "Usage: %s INPUT_PDF_PATH OUTPUT_PDF_PATH KEY_ID\n"
 
 func main() {
 	args := os.Args
@@ -198,12 +198,12 @@ func getExternalSignatureAndSign(inputPath string, keyId string) ([]byte, []byte
 	// We sign certificate using external signer that implement `crypto.Signer`.
 	certData, err := x509.CreateCertificate(rand.Reader, &template, &template, awsKmsSign.getPublicKey(), awsKmsSign.signer)
 	if err != nil {
-		panic(err)
+		return nil, nil, err
 	}
 
 	cert, err := x509.ParseCertificate(certData)
 	if err != nil {
-		panic(err)
+		return nil, nil, err
 	}
 
 	certChain := []*x509.Certificate{cert}
